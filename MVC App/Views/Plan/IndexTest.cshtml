@@ -1,0 +1,44 @@
+﻿@* Code -> start '@' *@
+
+@{
+    string PageTitle = "plans";
+    Console.WriteLine("");
+    List<int> Numbers = [1, 2, 3, 4, 5];
+    int Age = 15;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <h1>@PageTitle</h1>
+        <p>Hello From Razor View</p>
+    @if (Age>=18)
+        {
+            <h2>Adult</h2>
+        }
+        else
+        {
+            <h2>Minor</h2>
+        }
+    <ul>
+        @foreach(var num in Numbers)
+        {
+            <li><p>@num</p></li>
+        }
+    </ul>
+    @* we will not use href we will use tag helpers [ASP]*@
+    @*<a href="#">Home Page</a>*@
+    <a asp-controller="Home" asp-action="Index">Home Page</a>
+
+    </body>
+</html>
+
+
+
+@{
+
+}
+
